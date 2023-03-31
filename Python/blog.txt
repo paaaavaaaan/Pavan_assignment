@@ -1,0 +1,74 @@
+//blog application
+
+
+// Users 
+{
+  _id: 23478,
+  name: Pavan,
+  email: pavan@gmail.com,
+  password: lakdjko234,
+  created_at: date
+}
+
+// Post
+{
+  _id: ObjectId,
+  title: "Title of the poem",
+  body: "Body of the poem",
+  author_id: ObjectId,
+  created_at: Date,
+  comments: [
+    {
+      _id: ObjectId,
+      body: String,
+      author_id: ObjectId,
+      created_at: Date
+    }
+  ]
+}
+
+// Comment
+{
+  _id: ObjectId,
+  body: String,
+  author_id: ObjectId,
+  post_id: ObjectId,
+  created_at: Date
+}
+
+
+
+
+
+ER diagram :
+
+
+
+           +-------------+     	 +-------------+     	 +-------------+
+           |   Users     |     	 |   Posts     |     	 |   Comments  |
+           +-------------+     	 +-------------+     	 +-------------+
+           | _id         |     	 | _id         |     	 | _id         |
+           | name        |1     	M| title       |1     	M| body        |
+           | email       |---------->| body        |-------->| author_id   |
+           | password    |     	 | author_id   |     	 | post_id     |
+           | created_at  |     	 | created_at  |     	 | created_at  |
+           +-------------+     	 | comments    |         +-------------+
+                               	 |             |
+                               	 +-------------+
+                              
+Entities :
+
+Users
+Posts
+Comments
+
+
+
+Relationship :
+
+1.Between users and posts there is one to many relationship.(one user can create many posts)
+2.Between Posts and comments there is one to many relationship.(one post can have many comments)
+3.Between users and comments there is one to many relationship.(Each comment is created by only one user, but a user can create many comments)
+
+
+

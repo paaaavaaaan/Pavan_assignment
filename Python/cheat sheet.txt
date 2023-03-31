@@ -1,0 +1,19 @@
+cheat sheet:
+
+https://programmingwithmosh.com/wp-content/uploads/2019/07/Java-Cheat-Sheet.pdf
+
+https://programmingwithmosh.com/wp-content/uploads/2019/02/Python-Cheat-Sheet.pdf
+
+https://ihatetomatoes.net/wp-content/uploads/2017/01/react-cheat-sheet.pdf
+
+https://hackr.io/blog/javascript-cheat-sheet
+
+https://hackr.io/blog/javascript-cheat-sheet
+
+https://hackr.io/blog/javascript-cheat-sheet
+
+https://www.mongodb.com/docs/manual/crud/
+
+https://www.mongodb.com/docs/manual/reference/glossary/
+
+https://www.mongodb.com/developer/code-examples/

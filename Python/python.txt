@@ -1,0 +1,84 @@
+https://www.interviewbit.com/blog/framework-vs-library/
+
+
+Framework:
+
+DJANGO  FLASK  PYRAMID  CHERRYPY TORNADO
+
+
+
+
+import random
+
+# List of words to choose from
+words = ["python", "programming", "computer", "algorithm", "software"]
+
+# Select a random word from the list
+secret_word = random.choice(words)
+
+# Set up the game
+num_guesses = 10
+correct_guesses = []
+incorrect_guesses = []
+
+# Display the secret word as underscores
+display_word = "_" * len(secret_word)
+print("The secret word is: " + display_word)
+
+# Play the game
+while num_guesses > 0:
+    # Get a guess from the user
+    guess = input("Guess a letter: ")
+
+    # Check if the guess is correct
+    if guess in secret_word:
+        # Add the guess to the list of correct guesses
+        correct_guesses.append(guess)
+
+        # Update the display word to show the correct guess
+        for i in range(len(secret_word)):
+            if secret_word[i] == guess:
+                display_word = display_word[:i] + guess + display_word[i+1:]
+
+        print("Correct!")
+    else:
+        # Add the guess to the list of incorrect guesses
+        incorrect_guesses.append(guess)
+        print("Incorrect. You have", num_guesses-1, "guesses left.")
+
+    # Display the current state of the game
+    print("Correct guesses:", correct_guesses)
+    print("Incorrect guesses:", incorrect_guesses)
+    print("Current word:", display_word)
+
+    # Check if the user has won or lost
+    if display_word == secret_word:
+        print("Congratulations, you guessed the word!")
+        break
+    elif num_guesses == 1:
+        print("Sorry, you ran out of guesses. The word was", secret_word)
+        break
+
+    num_guesses -= 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
