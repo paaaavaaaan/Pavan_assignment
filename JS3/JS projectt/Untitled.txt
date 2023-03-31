@@ -1,0 +1,34 @@
+
+import React from 'react';
+import Button from './comp/b';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello, World!</h1>
+        <Button />
+      </div>
+    );
+  }
+}
+
+export default App;
+
+import React from 'react';
+
+class Button extends React.Component {
+  handleClick = () => {
+    console.log('Button clicked!');
+  };
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        Click me!
+      </button>
+    );
+  }
+}
+
+export default Button;
